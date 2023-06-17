@@ -1,0 +1,17 @@
+D:\mobilApi\PaylapAPI\Paylap.Business\bin\Debug\net7.0\Paylap.Business.deps.json
+D:\mobilApi\PaylapAPI\Paylap.Business\bin\Debug\net7.0\Paylap.Business.dll
+D:\mobilApi\PaylapAPI\Paylap.Business\bin\Debug\net7.0\Paylap.Business.pdb
+D:\mobilApi\PaylapAPI\Paylap.Business\obj\Debug\net7.0\Paylap.Business.csproj.AssemblyReference.cache
+D:\mobilApi\PaylapAPI\Paylap.Business\obj\Debug\net7.0\Paylap.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\mobilApi\PaylapAPI\Paylap.Business\obj\Debug\net7.0\Paylap.Business.AssemblyInfoInputs.cache
+D:\mobilApi\PaylapAPI\Paylap.Business\obj\Debug\net7.0\Paylap.Business.AssemblyInfo.cs
+D:\mobilApi\PaylapAPI\Paylap.Business\obj\Debug\net7.0\Paylap.Business.csproj.CoreCompileInputs.cache
+D:\mobilApi\PaylapAPI\Paylap.Business\obj\Debug\net7.0\Paylap.Business.dll
+D:\mobilApi\PaylapAPI\Paylap.Business\obj\Debug\net7.0\refint\Paylap.Business.dll
+D:\mobilApi\PaylapAPI\Paylap.Business\obj\Debug\net7.0\Paylap.Business.pdb
+D:\mobilApi\PaylapAPI\Paylap.Business\obj\Debug\net7.0\ref\Paylap.Business.dll
+D:\mobilApi\PaylapAPI\Paylap.Business\bin\Debug\net7.0\Paylap.DataAccess.dll
+D:\mobilApi\PaylapAPI\Paylap.Business\bin\Debug\net7.0\Paylap.Entities.dll
+D:\mobilApi\PaylapAPI\Paylap.Business\bin\Debug\net7.0\Paylap.DataAccess.pdb
+D:\mobilApi\PaylapAPI\Paylap.Business\bin\Debug\net7.0\Paylap.Entities.pdb
+D:\mobilApi\PaylapAPI\Paylap.Business\obj\Debug\net7.0\Paylap.Business.csproj.CopyComplete

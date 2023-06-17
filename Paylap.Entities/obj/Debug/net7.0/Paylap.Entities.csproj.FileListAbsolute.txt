@@ -1,0 +1,12 @@
+D:\mobilApi\PaylapAPI\Paylap.Entities\bin\Debug\net7.0\Paylap.Entities.deps.json
+D:\mobilApi\PaylapAPI\Paylap.Entities\bin\Debug\net7.0\Paylap.Entities.dll
+D:\mobilApi\PaylapAPI\Paylap.Entities\bin\Debug\net7.0\Paylap.Entities.pdb
+D:\mobilApi\PaylapAPI\Paylap.Entities\obj\Debug\net7.0\Paylap.Entities.csproj.AssemblyReference.cache
+D:\mobilApi\PaylapAPI\Paylap.Entities\obj\Debug\net7.0\Paylap.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\mobilApi\PaylapAPI\Paylap.Entities\obj\Debug\net7.0\Paylap.Entities.AssemblyInfoInputs.cache
+D:\mobilApi\PaylapAPI\Paylap.Entities\obj\Debug\net7.0\Paylap.Entities.AssemblyInfo.cs
+D:\mobilApi\PaylapAPI\Paylap.Entities\obj\Debug\net7.0\Paylap.Entities.csproj.CoreCompileInputs.cache
+D:\mobilApi\PaylapAPI\Paylap.Entities\obj\Debug\net7.0\Paylap.Entities.dll
+D:\mobilApi\PaylapAPI\Paylap.Entities\obj\Debug\net7.0\refint\Paylap.Entities.dll
+D:\mobilApi\PaylapAPI\Paylap.Entities\obj\Debug\net7.0\Paylap.Entities.pdb
+D:\mobilApi\PaylapAPI\Paylap.Entities\obj\Debug\net7.0\ref\Paylap.Entities.dll

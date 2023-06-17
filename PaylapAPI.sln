@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylapAPI", "PaylapAPI\PaylapAPI.csproj", "{A0E006FB-3F91-4137-97FF-29FD431EA8ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paylap.Business", "Paylap.Business\Paylap.Business.csproj", "{ED8B022B-54E4-4059-9E49-644280B300D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paylap.DataAccess", "Paylap.DataAccess\Paylap.DataAccess.csproj", "{7ED3B753-556C-4117-B0D6-8F7CC2A3FA49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paylap.Entities", "Paylap.Entities\Paylap.Entities.csproj", "{EB68B1FE-0CBF-45B7-9A36-A8A685DE042B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0E006FB-3F91-4137-97FF-29FD431EA8ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E006FB-3F91-4137-97FF-29FD431EA8ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E006FB-3F91-4137-97FF-29FD431EA8ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E006FB-3F91-4137-97FF-29FD431EA8ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED8B022B-54E4-4059-9E49-644280B300D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED8B022B-54E4-4059-9E49-644280B300D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED8B022B-54E4-4059-9E49-644280B300D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED8B022B-54E4-4059-9E49-644280B300D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED3B753-556C-4117-B0D6-8F7CC2A3FA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED3B753-556C-4117-B0D6-8F7CC2A3FA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED3B753-556C-4117-B0D6-8F7CC2A3FA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED3B753-556C-4117-B0D6-8F7CC2A3FA49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB68B1FE-0CBF-45B7-9A36-A8A685DE042B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB68B1FE-0CBF-45B7-9A36-A8A685DE042B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB68B1FE-0CBF-45B7-9A36-A8A685DE042B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB68B1FE-0CBF-45B7-9A36-A8A685DE042B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E36C9659-E865-4C50-AD4E-B181286BAAD3}
+	EndGlobalSection
+EndGlobal
