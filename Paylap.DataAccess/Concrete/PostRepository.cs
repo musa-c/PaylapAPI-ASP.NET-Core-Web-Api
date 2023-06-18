@@ -77,13 +77,6 @@ namespace Paylap.DataAccess.Concrete
                                 }
                             }).ToListAsync();
 
-                        //var jsonSettings = new JsonSerializerSettings
-                        //{
-                        //    NullValueHandling = NullValueHandling.Ignore
-                        //};
-
-                        //var json = JsonConvert.SerializeObject(posts, Newtonsoft.Json.Formatting.Indented, jsonSettings);
-                        //return json;
             }
         }
 
@@ -130,6 +123,10 @@ namespace Paylap.DataAccess.Concrete
                           {
                               UserId = p.UserId,
                               Id = p.Id,
+                              Likes = p.Likes,
+                              BookMarks = p.BookMarks,
+                              Comments = p.Comments,
+                              Dislikes = p.Dislikes,
                               LikeCount = p.Likes.Count,
                               DislikeCount = p.Dislikes.Count,
                               CommentCount = p.Comments.Count,
