@@ -29,13 +29,16 @@ namespace Paylap.Entities
         [Required]
         [StringLength(15, MinimumLength = 6, ErrorMessage = "Şifreniz en az 6 karakterden en çok 15 karakterden oluşmalıdır.")]
         public string Password { get; set; }
-        public byte[]? Avatar { get; set; }
+        public string? Avatar { get; set; }
         // user'in birden fazla post'u olabilir. Post yalnızce bir kullanıca ait 1-n
         public virtual ICollection<Post> Posts { get; set; }
         public ICollection<BookMark>? BookMarks { get; set; }
         public ICollection<Comment>? Comments { get; set; }
         public ICollection<Dislike>? Dislikes { get; set; }
         public ICollection<Like>? Likes { get; set; }
-
+        public int? LikeCount { get; set; }
+        public int? CommentCount { get; set; }
+        public int? BookMarkCount { get; set; }
+        public int? DislikeCount { get; set; }
     }
 }

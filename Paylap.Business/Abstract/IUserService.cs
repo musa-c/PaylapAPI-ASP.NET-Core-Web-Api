@@ -19,7 +19,7 @@ namespace Paylap.Business.Abstract
         Task<User> UpdateLastName(int id, string lastname);
         Task<User> UpdateEmail(int id, string email);
         Task<User> UpdatePassword(int id, string password);
-        Task<User> UpdateAvatar(int id, byte[] avatar);
+        Task<User> UpdateAvatar(int id, string avatar);
         Task DeleteUser(int id);
     }
 }

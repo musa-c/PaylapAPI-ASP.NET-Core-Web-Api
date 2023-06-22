@@ -12,8 +12,8 @@ using Paylap.DataAccess;
 namespace Paylap.DataAccess.Migrations
 {
     [DbContext(typeof(PaylapDbContext))]
-    [Migration("20230616212431_createDb")]
-    partial class createDb
+    [Migration("20230620144201_AvatarColumnDataTypeChanged")]
+    partial class AvatarColumnDataTypeChanged
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -166,8 +166,18 @@ namespace Paylap.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<byte[]>("Avatar")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("Avatar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("BookMarkCount")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CommentCount")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("DislikeCount")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -180,6 +190,9 @@ namespace Paylap.DataAccess.Migrations
                     b.Property<string>("LastName")
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<int?>("LikeCount")
+                        .HasColumnType("int");
 
                     b.Property<string>("Password")
                         .IsRequired()

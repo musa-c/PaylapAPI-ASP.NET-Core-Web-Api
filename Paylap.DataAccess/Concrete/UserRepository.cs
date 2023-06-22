@@ -80,7 +80,7 @@ namespace Paylap.DataAccess.Concrete
                     UserName = p.UserName ?? "",
                     Password = p.Password,
                     Email = p.Email,
-                    Avatar = p.Avatar ?? new byte[0],
+                    Avatar = p.Avatar ?? "237",
                 }).ToListAsync();
                 return users;
             }
@@ -90,21 +90,27 @@ namespace Paylap.DataAccess.Concrete
         {
             using (var paylapDbContext = new PaylapDbContext())
             {
-                return await paylapDbContext.Users.Where(p => p.Id == id).
+                var user = await paylapDbContext.Users.Where(p => p.Id == id).
                     Select(a => new User
                 {
                     Id = a.Id,
                     FirstName = a.FirstName ?? "",
+                    BookMarkCount = a.BookMarks.Count,
+                    LikeCount = a.Likes.Count,
+                    DislikeCount = a.Dislikes.Count,
+                    CommentCount = a.Comments.Count,
                     LastName = a.LastName ?? "",
                     UserName = a.UserName ?? "",
                     Password = a.Password,
                     Email = a.Email,
-                    Avatar = a.Avatar ?? new byte[0],
+                    Avatar = a.Avatar ?? "237",
                 }).SingleOrDefaultAsync();
+
+                return user;
             }
         }
 
-        public async Task<User> UpdateAvatar(int id, byte[] avatar)
+        public async Task<User> UpdateAvatar(int id, string avatar)
         {
             using (var paylapDbContext = new PaylapDbContext())
             {
@@ -118,14 +124,22 @@ namespace Paylap.DataAccess.Concrete
 
         public async Task<User> UpdateEmail(int id, string email)
         {
-            using (var paylapDbContext = new PaylapDbContext())
+            if (IsEmailUnique(email))
             {
-                var updateUser = await GetUserById(id);
-                updateUser.Email = email;
-                paylapDbContext.Users.Update(updateUser);
-                await paylapDbContext.SaveChangesAsync();
-                return updateUser;
+                using (var paylapDbContext = new PaylapDbContext())
+                {
+                    var updateUser = await GetUserById(id);
+                    updateUser.Email = email;
+                    paylapDbContext.Users.Update(updateUser);
+                    await paylapDbContext.SaveChangesAsync();
+                    return updateUser;
+                }
             }
+            else
+            {
+                throw new Exception("Email adresi zaten kullanılmaktadır.");
+            }
+         
         }
 
         public async Task<User> UpdateFirstName(int id, string firstname)
@@ -166,14 +180,22 @@ namespace Paylap.DataAccess.Concrete
 
         public async Task<User> UpdateUserName(int id, string username)
         {
-            using (var paylapDbContext = new PaylapDbContext())
+            if (IsUserNameUnique(username))
             {
-                var updateUser = await GetUserById(id);
-                updateUser.UserName = username;
-                paylapDbContext.Users.Update(updateUser);
-                await paylapDbContext.SaveChangesAsync();
-                return updateUser;
+                using (var paylapDbContext = new PaylapDbContext())
+                {
+                    var updateUser = await GetUserById(id);
+                    updateUser.UserName = username;
+                    paylapDbContext.Users.Update(updateUser);
+                    await paylapDbContext.SaveChangesAsync();
+                    return updateUser;
+                }
             }
+            else
+            {
+                throw new Exception("kullanıcı adı zaten kullanılmaktadır.");
+            }
+       
         }
 
         //FirstOrDefaultAsync bulursa Users nesnesi bulamazsa null.
@@ -181,7 +203,17 @@ namespace Paylap.DataAccess.Concrete
         {
             using (var paylapDbContext = new PaylapDbContext())
             {
-                var user = await paylapDbContext.Users.FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
+                var user = await paylapDbContext.Users.Where(u => u.Email == email && u.Password == password)
+                    .Select(u => new User
+                    {
+                        Id = u.Id,
+                        UserName = u.UserName,
+                        Avatar = u.Avatar ?? "237",
+                        FirstName = u.FirstName,
+                        Email = u.Email,
+                        Password = u.Password,
+                    }).FirstOrDefaultAsync();
+
                 if (user != null)
                 {
                     return user;
@@ -198,7 +230,16 @@ namespace Paylap.DataAccess.Concrete
         {
             using (var paylapDbContext = new PaylapDbContext())
             {
-                var user = await paylapDbContext.Users.FirstOrDefaultAsync(u => u.UserName == username && u.Password == password);
+                var user = await paylapDbContext.Users.Where(u => u.UserName == username && u.Password == password)
+                    .Select(u => new User
+                    {
+                        Id = u.Id,
+                        UserName = u.UserName,
+                        Avatar = u.Avatar ?? "237",
+                        FirstName = u.FirstName,
+                        Email = u.Email,
+                        Password = u.Password,
+                    }).SingleOrDefaultAsync();
                 if (user != null)
                 {
                     return user;

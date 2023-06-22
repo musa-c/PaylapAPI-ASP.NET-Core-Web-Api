@@ -71,7 +71,7 @@ namespace Paylap.DataAccess.Concrete
                                 {
                                     Id = p.User.Id,
                                     UserName = p.User.UserName,
-                                    Avatar = p.User.Avatar ?? new byte[0],
+                                    Avatar = p.User.Avatar ?? "237",
                                     FirstName = p.User.FirstName ?? "",
                                     LastName = p.User.LastName ?? "",
                                 }
@@ -90,6 +90,10 @@ namespace Paylap.DataAccess.Concrete
                             .Select(p => new Post
                             {
                                 Id = p.Id,
+                                UserId = p.UserId,
+                                BookMarks = p.BookMarks,
+                                Likes = p.Likes,
+                                Dislikes = p.Dislikes,
                                 LikeCount = p.Likes.Count,
                                 DislikeCount = p.Dislikes.Count,
                                 CommentCount = p.Comments.Count,
@@ -100,9 +104,9 @@ namespace Paylap.DataAccess.Concrete
                                 {
                                     Id = p.User.Id,
                                     UserName = p.User.UserName,
-                                    Avatar = p.User.Avatar,
-                                    FirstName = p.User.FirstName,
-                                    LastName = p.User.LastName,
+                                    Avatar = p.User.Avatar ?? "237",
+                                    FirstName = p.User.FirstName ?? "",
+                                    LastName = p.User.LastName ?? "",
                                 }
                             })
                             .SingleOrDefaultAsync();

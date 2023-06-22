@@ -47,7 +47,7 @@ namespace Paylap.Business.Concrete
             return await _userRepository.GetUserById(id);
         }
 
-        public async Task<User> UpdateAvatar(int id, byte[] avatar)
+        public async Task<User> UpdateAvatar(int id, string avatar)
         {
             return await _userRepository.UpdateAvatar(id, avatar);
         }

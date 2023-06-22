@@ -58,7 +58,7 @@ namespace Paylap.DataAccess.Concrete
                             UserName = p.User.UserName ?? "",
                             LastName= p.User.LastName ?? "",
                             FirstName= p.User.FirstName ?? "",
-                            Avatar = p.User.Avatar ?? new byte[0]
+                            Avatar = p.User.Avatar ?? "237"
                         }
                     }).ToListAsync();
                 if (likes.Count == 0)
@@ -82,7 +82,7 @@ namespace Paylap.DataAccess.Concrete
                         UserName = p.User.UserName ?? "",
                         LastName = p.User.LastName ?? "",
                         FirstName = p.User.FirstName ?? "",
-                        Avatar = p.User.Avatar ?? new byte[0]
+                        Avatar = p.User.Avatar ?? "237"
                     }
                 }).SingleAsync();
                     //throw new ArgumentNullException("like", "like bulunamadı.");

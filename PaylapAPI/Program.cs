@@ -1,4 +1,5 @@
 
+using Microsoft.AspNetCore.Mvc;
 using Paylap.Business.Abstract;
 using Paylap.Business.Concrete;
 using Paylap.DataAccess.Abstract;
@@ -13,6 +14,16 @@ namespace PaylapAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            //builder.Services.AddCors(options =>
+            //{
+            //    options.AddDefaultPolicy(builder =>
+            //    {
+            //        builder.AllowAnyOrigin()
+            //               .AllowAnyMethod()
+            //               .AllowAnyHeader();
+            //    });
+            //});
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -32,6 +43,7 @@ namespace PaylapAPI
             builder.Services.AddSingleton<IUserService, UserService>();
             builder.Services.AddSingleton<IUserRepository, UserRepository>();
 
+          
             var app = builder.Build();
             
             app.UseSwagger();
@@ -45,6 +57,7 @@ namespace PaylapAPI
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+            //app.UseCors(); 
 
 
             app.MapControllers();

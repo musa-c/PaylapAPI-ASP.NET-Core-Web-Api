@@ -43,6 +43,7 @@ namespace PaylapAPI.Controllers
         {
             var createUser = await _userService.CreateUser(user);
             return CreatedAtAction("Get", new { id = createUser.Id }, user); // 201 + data
+            // 1. parametre http eylem yönteminin adı.
         }
 
         [HttpGet]
@@ -145,7 +146,7 @@ namespace PaylapAPI.Controllers
 
         [HttpPut]
         [Route("[action]/{id}/{avatar}")]
-        public async Task<IActionResult> UpdateAvatar(int id, byte[] avatar)
+        public async Task<IActionResult> UpdateAvatar(int id, string avatar)
         {
 
             if (await _userService.GetUserById(id) != null)
